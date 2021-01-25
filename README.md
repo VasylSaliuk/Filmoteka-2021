@@ -1,11 +1,17 @@
 # Filmoteka-2021
 Командный проект в рамках хакатона по курсу JavaScript группы №5 ("DreamTeam") (Frontend Core #25, GoIT).
 
-Tech stack
-Для реализации проекта были использованы такие технологии: HTML5 (%), CSS3 (%), JavaScript (%)....
+## Team
 
-Developers
-https://www.linkedin.com/in/vasyl-saliuk-255b05169/
-https://www.linkedin.com/in/roman-larionov-385ab692/
-https://www.linkedin.com/in/anna-reznik-92a455200/
-https://www.linkedin.com/in/mariia-randarevich-030b0a137/
+- Vasyl (https://github.com/VasylSaliuk)
+- Roma (https://github.com/RondeRoma)
+- Annya (https://github.com/Anna-2901)
+- Vova (https://github.com/volodymyr71)
+- Katya (https://github.com/catherin-k)
+- Maria (https://github.com/Mariia1986)
+
+## Tools & Resources
+
+- Gulp (https://github.com/luxplanjay/gulp-starter-kit)
+- Materialize-CSS (https://materializecss.com/)
+- The MovieDB API (https://developers.themoviedb.org/3/getting-started)
