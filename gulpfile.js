@@ -42,18 +42,3 @@ exports.start = series(
   serve,
 );
 
-// exports.build = series(
-//   tasks.clean,
-//   tasks.images,
-//   parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
-//   tasks.inject,
-// );
-// var handlebars = require('gulp-handlebars');
-// var defineModule = require('gulp-define-module');
- 
-// gulp.task('templates', function(){
-//   gulp.src(['templates/*.hbs'])
-//     .pipe(handlebars())
-//     .pipe(defineModule('node'))
-//     .pipe(gulp.dest('build/templates/'));
-// });
