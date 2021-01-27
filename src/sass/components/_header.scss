@@ -1,0 +1,50 @@
+header {
+  padding-top: 45px;
+  padding-bottom: 70px;
+}
+.navigation-box {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-main {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-form {
+  position: relative;
+  text-align: center;
+}
+.search-form-btn {
+  background-color: initial;
+  border: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+.input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.14;
+  border: transparent;
+  border-bottom: 1px solid #141414;
+}
+
+@include for-size(mobile) {
+  .logo-name {
+    display: none;
+  }
+}
+.home-link {
+  margin-right: 35px;
+}
+.search-form {
+  margin-top: 35px;
+}
+
+// Tablet-------
+@include for-size(desktop) {
+  header {
+    padding-bottom: 90px;
+  }
+}
