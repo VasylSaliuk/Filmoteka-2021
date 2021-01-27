@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Filmoteka</title>
-    <!-- Сюда будет всталена ссылка на файл стилей -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- endinject -->
-  </head>
 
+<<<<<<< HEAD
   <body>
     <!-- inject:header -->
     <header>
@@ -61,9 +52,82 @@
       <!-- endinject -->
     </main>
     <!-- endinject -->
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Filmoteka</title>
+  <!-- Сюда будет всталена ссылка на файл стилей -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- endinject -->
+</head>
 
-    <!-- Сюда будет всталена ссылка на файл скриптов -->
-    <!-- inject:js -->
+<body>
+  <!-- inject:header -->
+  <header>
+    <div class="container">
+      <nav class="navigation">
+        <div class="navigation-box">
+          <a href="#" class="logo"><svg class="logo-icon" width="24" height="24">
+              <use href="./images/film-1.svg#film"></use>
+            </svg><span class="logo-name">Filmoteka</span></a>
+          <ul class="navigation-main">
+            <li class="home-link item"><a href="#">HOME</a></li>
+            <li class="library-link item"><a href="#">MY LIBRARY</a></li>
+          </ul>
+          <div>
+      </nav>
+      <form class="search-form">
+        <button type="submit" class="search-form-btn">
+          <svg class="search-icon" width="12" height="12">
+            <use href="./images/loupe.svg#loupe"></use>
+          </svg>
+        </button>
+        <input type="text" class="input" name="query" placeholder="Write movie name and click Enter" />
+      </form>
+    </div>
+    </div>
+  </header>
+  <!-- endinject -->
+
+  <!-- inject:main -->
+  <main>
+    <!-- inject:homePage -->
+    <section class="main_section">
+      <div class="main_container">
+        <ul main_search_list></ul>
+    
+    </div>
+    </section>
     <!-- endinject -->
-  </body>
+  
+    <!-- inject:detailsPage -->
+    
+    <!-- endinject -->
+  
+    <!-- inject:myFilmLibraryPage -->
+    
+    <!-- endinject -->
+  </main>
+  <!-- endinject -->
+
+  <!-- inject:footer -->
+  <footer class="footer" id="footer">
+      <div class="container footer-copyright">
+  
+          <a class="footer-text" href="#">Made by ©DreamTeam</a>
+  
+  
+      </div>
+  </footer>
+  <!-- endinject -->
+
+  <!-- Сюда будет всталена ссылка на файл скриптов -->
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+>>>>>>> 7315e56468dd5b5660c1e1f540cf38c9bf6d145f
+
 </html>
