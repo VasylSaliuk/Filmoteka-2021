@@ -1,7 +1,7 @@
 {
   "name": "filmoteka-2021",
   "version": "1.0.0",
-  "description": "",
+  "description": "Командный проект в рамках хакатона по курсу JavaScript группы №5 (\"DreamTeam\") (Frontend Core #25, GoIT).",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=1234 gulp start --development ",
