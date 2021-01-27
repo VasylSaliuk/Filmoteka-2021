@@ -13,6 +13,18 @@
 .footer-copyright {
   padding-top: 35px;
   padding-bottom: 35px;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 1.21;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
   // border: solid brown 3px;
 }
 
