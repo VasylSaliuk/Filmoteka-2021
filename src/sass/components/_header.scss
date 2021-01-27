@@ -3,15 +3,20 @@ header {
   padding-bottom: 70px;
   box-shadow: 0px 13px 23px -13px rgba(0, 0, 0, 0.41);
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
 .navigation-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 .navigation-main {
   display: flex;
-  justify-content: flex-end;
 }
+
 .search-form {
   position: relative;
   text-align: center;
@@ -45,9 +50,18 @@ header {
 }
 
 // tablet--------
-@include for-size {
-  .input {
+@include for-size(tablet) {
+  .logo-icon {
+    margin-right: 10px;
+  }
+  .logo {
+    display: flex;
+    align-items: baseline;
+  }
+  .search-form {
     width: 340px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
