@@ -1,4 +1,3 @@
-export default {
-   filmList: document.querySelector('.main_filmlist') 
 
-}
+ const  filmList =document.querySelector('.main_filmlist') 
+

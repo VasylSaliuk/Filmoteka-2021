@@ -1,12 +1,9 @@
 'use strict';
 
-var _homePage = _interopRequireDefault(require("./tamplates/homePage.hbs"));
-
-var _refs = _interopRequireDefault(require("./refs.js"));
+var _homePage = _interopRequireDefault(require("../tamplates/homePage.hbs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var filmlist = _refs.default.filmlist;
 var api = {
   key: '0758483bbf141f2377e75ad4723d5ab5',
   baseUrl: 'https://api.themoviedb.org/3/',
@@ -24,7 +21,6 @@ var api = {
     });
   }
 };
-console.log(api.fetchTrendFilms());
 
 function renderFilm(arr) {
   var markup = (0, _homePage.default)(arr);
@@ -38,11 +34,4 @@ function homePageRender() {
 }
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  filmList: document.querySelector('.main_filmlist')
-};
-exports.default = _default;
+var filmList = document.querySelector('.main_filmlist');

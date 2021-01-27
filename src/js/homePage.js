@@ -1,7 +1,6 @@
 'use strict';
-import filmItem from './tamplates/homePage.hbs';
-import refs from './refs.js';
-const { filmlist } = refs;
+import filmItem from '../tamplates/homePage.hbs';
+
 const api = {
   key: '0758483bbf141f2377e75ad4723d5ab5',
   baseUrl: 'https://api.themoviedb.org/3/',
@@ -19,10 +18,10 @@ const api = {
       .then(data => data.results);
   },
 };
-console.log(api.fetchTrendFilms());
 
 function renderFilm(arr) {
   const markup = filmItem(arr);
+
   filmlist.insertAdjacentHTML('beforeEnd', markup);
 }
 
