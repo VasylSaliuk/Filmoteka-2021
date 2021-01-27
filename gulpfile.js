@@ -42,9 +42,3 @@ exports.start = series(
   serve,
 );
 
-exports.build = series(
-  tasks.clean,
-  tasks.images,
-  parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
-  tasks.inject,
-);
