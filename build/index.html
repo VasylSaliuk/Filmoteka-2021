@@ -14,6 +14,7 @@
   </head>
 
   <body>
+     <!-- inject:header -->
     <header>
      <div class="container">
        <nav class="navigation">
@@ -40,17 +41,29 @@
       </div>
      </div>
     </header>
-
+    <!-- endinject -->
+   
+    <!-- inject:main -->
     <main>
-
-        <section class="main_section">
-            <div class="main_container">
-              <ul main_search_list></ul>
-            </div>
-        </section>
-
- </main>
-
+      <!-- inject:homePage -->
+      <section class="main_section">
+        <div class="main_container">
+          <ul main_search_list></ul>
+      
+      </div>
+      </section>
+      <!-- endinject -->
+    
+      <!-- inject:detailsPage -->
+      
+      <!-- endinject -->
+    
+      <!-- inject:myFilmLibraryPage -->
+      
+      <!-- endinject -->
+    </main>
+    <!-- endinject -->
+    
     <!-- Сюда будет всталена ссылка на файл скриптов -->
     <!-- inject:js -->
     <!-- endinject -->
