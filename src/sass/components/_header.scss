@@ -11,6 +11,7 @@ header {
   align-items: center;
   text-align: center;
 }
+
 .navigation-main {
   display: flex;
 }
@@ -40,13 +41,19 @@ header {
     display: none;
   }
 }
+
 .home-link {
   margin-right: 35px;
-  font-size: 14px;
-  font-weight: 700;
-  color: rgba(55, 44, 72, 0.702);
+  // font-size: 14px;
+  // font-weight: 700;
+  // color: rgba(55, 44, 72, 0.702);
 }
-.library-link {
+// .library-link {
+//   font-size: 14px;
+//   font-weight: 700;
+//   color: rgba(55, 44, 72, 0.702);
+// }
+.navItem-text {
   font-size: 14px;
   font-weight: 700;
   color: rgba(55, 44, 72, 0.702);
@@ -54,7 +61,14 @@ header {
 .search-form {
   margin-top: 35px;
 }
-
+.library-button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #9895a2;
+  font-size: 16px;
+  font-weight: 400;
+}
 // tablet--------
 @include for-size(tablet) {
   .logo-icon {
@@ -62,7 +76,6 @@ header {
   }
   .logo {
     display: flex;
-    align-items: baseline;
   }
   .search-form {
     width: 340px;
