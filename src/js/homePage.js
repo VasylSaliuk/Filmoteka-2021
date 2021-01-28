@@ -1,12 +1,13 @@
 'use strict';
-import filmItem from '../tamplates/homePage.hbs';
 
+const  filmList =document.querySelector('.main_filmlist') 
 const api = {
-  key: '0758483bbf141f2377e75ad4723d5ab5',
+  key: 'd91911ebb88751cf9e5c4b8fdf4412c9',
   baseUrl: 'https://api.themoviedb.org/3/',
-  options: 'trending/all/day?',
+  options: 'movie/popular?',
+  pageNumber:1,
   fetchTrendFilms() {
-    const url = this.baseUrl + this.options + `api_key=${this.key}`;
+    const url = this.baseUrl + this.options + `api_key=${this.key}&language=en-US&page=${this.pageNumber}`;
     return fetch(url)
       .then(response => {
         if (response.ok) {
@@ -18,11 +19,18 @@ const api = {
       .then(data => data.results);
   },
 };
+console.log(api.fetchTrendFilms())
 
 function renderFilm(arr) {
-  const markup = filmItem(arr);
+  const markup = arr.map(({title, poster_path,vote_average, id}) => {
+   return `<li class="main_filmlist__item">
+   <h2>${title}</h2>
+   <img id="${id}" width='200' src="https://image.tmdb.org/t/p/w500${poster_path}" alt="${title}">
+   <p class="rate">${vote_average}</p>
+</li>`
+  });
 
-  filmlist.insertAdjacentHTML('beforeEnd', markup);
+  filmList.insertAdjacentHTML('beforeEnd', markup.join(""));
 }
 
 document.addEventListener('DOMContentLoaded', homePageRender);
