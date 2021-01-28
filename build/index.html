@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <body>
- <main>
- 
-  <header>
-   <div class="container">
-     <nav class="navigation">
-      <div class="navigation-box">
-       <a href="#" class="logo"><svg class="logo-icon" width="24" height="24"><use href="./images/film-1.svg#film"></use></svg><span class="logo-name">Filmoteka</span></a>
-       <ul class="navigation-main">
-        <li class="home-link item"><a href="#">HOME</a></li>
-        <li class="library-link item"><a href="#">MY LIBRARY</a></li>
-       </ul>
-      <div>
-   </nav>
-        <form class="search-form">
-          <button type="submit" class="search-form-btn">
-          <svg class="search-icon" width="12" height="12"><use href="./images/loupe.svg#loupe"></use></svg>
-          </button>
-           <input
-              type="text"
-              class="input"
-              name="query"
-              placeholder="Write movie name and click Enter"
-            />
-        </form>
-      </div>
-    </div>
-   </div>
-  </header>
-<section class="main_section">
-  <div class="main_container">
-    <ul main_filmlist></ul>
-  </div>
-</section>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Filmoteka</title>
   <!-- Сюда будет всталена ссылка на файл стилей -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <!-- inject:css -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- endinject -->
@@ -52,14 +19,20 @@
     <div class="container">
       <nav class="navigation">
         <div class="navigation-box">
-          <a href="#" class="logo"><svg class="logo-icon" width="24" height="24">
-              <use href="./images/film-1.svg#film"></use>
-            </svg><span class="logo-name">Filmoteka</span></a>
+          <a href="#" class="logo"
+            ><svg class="logo-icon" width="24" height="24">
+              <use href="./images/film-1.svg#film"></use></svg
+            ><span class="logo-name">Filmoteka</span></a
+          >
           <ul class="navigation-main">
-            <li class="home-link item"><a href="#">HOME</a></li>
-            <li class="library-link item"><a href="#">MY LIBRARY</a></li>
+            <li class="home-link item">
+              <a class="navItem-text" href="#">HOME</a>
+            </li>
+            <li class="library-link item">
+              <a class="navItem-text" href="#">MY LIBRARY</a>
+            </li>
           </ul>
-          <div>
+        </div>
       </nav>
       <form class="search-form">
         <button type="submit" class="search-form-btn">
@@ -67,9 +40,17 @@
             <use href="./images/loupe.svg#loupe"></use>
           </svg>
         </button>
-        <input type="text" class="input" name="query" placeholder="Write movie name and click Enter" />
+        <input
+          type="text"
+          class="input"
+          name="query"
+          placeholder="Write movie name and click Enter"
+        />
       </form>
-    </div>
+      <div>
+        <button type="button" class="library-button">Watched</button>
+        <button type="button" class="library-button">Queue</button>
+      </div>
     </div>
   </header>
   <!-- endinject -->
@@ -78,15 +59,43 @@
   <main>
     <!-- inject:homePage -->
     <section class="main_section">
-      <div class="main_container">
-        <ul main_search_list></ul>
-    
-    </div>
+      <div class="container">
+        <ul class="main_filmlist" >
+         
+        </ul>
+      </div>
     </section>
     <!-- endinject -->
   
     <!-- inject:detailsPage -->
-    
+    <section class="details-page">
+        <div class="container">
+            <div class="details-container">
+                <div class="image__container">
+                    <img class="image" src=""/>
+                </div>
+            <div class=" details__wrapper">
+                <h2 class="details__name"></h2>
+                <p class="details__vote details_text">Vote / Votes</p>
+                <p class="details__popularity details_text">Popularity</p>
+                <p class="details__title details_text">Original Title</p>
+                <p class="details__genre details_text">Genre</p>
+                <div class="about">
+                <p class="details__about">About</p>
+                <p class="details__description"></p>
+                </div>
+                <div class="buttons__container">
+                    <button class="details__button">
+                        Add to watched
+                    </button>
+                    <button class="details__button">
+                        Add to queue
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
     <!-- endinject -->
   
     <!-- inject:myFilmLibraryPage -->
@@ -97,24 +106,30 @@
 
   <!-- inject:footer -->
   <footer class="footer" id="footer">
-      <div class="container footer-copyright">
-        <a class="footer-text" href="#">Made by ©DreamTeam</a> 
+      <div class="container">
+          <div class="footer-copyright">
+              <a class="footer-text" href="#">MADE by ©DreamTeam</a>
+              <a href="#home" class="scroll-up">
+                  <i class="material-icons material-icons-white">keyboard_arrow_up</i>
+              </a>
+          </div>
+  
       </div>
   </footer>
   <!-- endinject -->
 
+ <!-- inject:footer -->
+ <div class="up-btn-wrapper visuallyhidden" data-up-btn>
+     <svg class="up-btn__icon">
+       <use href="./images/sprite.svg#up"></use>
+     </svg>
+   </div>
+ <!-- endinject -->
+
   <!-- Сюда будет всталена ссылка на файл скриптов -->
   <!-- inject:js -->
+  <script src="js/scripts.js"></script>
   <!-- endinject -->
 </body>
-   
-    <!-- endinject -->
-    
-    <!-- Сюда будет всталена ссылка на файл скриптов -->
-    <!-- inject:js -->
-    <script src="js/scripts.js"></script>
-    <!-- endinject -->
-   
-  </body>
 
 </html>
