@@ -19,7 +19,6 @@ var api = {
     });
   }
 };
-console.log(api.fetchTrendFilms());
 
 function renderFilm(arr) {
   var markup = arr.map(function (_ref) {
@@ -28,7 +27,7 @@ function renderFilm(arr) {
         vote_average = _ref.vote_average,
         id = _ref.id,
         release_date = _ref.release_date;
-    return "<li class=\"filmlist__item\">\n   \n   <img id=\"".concat(id, "\" width='280' src=\"https://image.tmdb.org/t/p/w500").concat(poster_path, "\" alt=\"").concat(title, "\">\n   <h2>").concat(title, "</h2>||<span class=\"release_date\">").concat(release_date, "</span>\n   <span class=\"rate\">").concat(vote_average, "</span>\n   \n   \n</li>");
+    return "<li class=\"filmlist__item\">\n     \n     <img id=\"".concat(id, "\" width='280' src=\"https://image.tmdb.org/t/p/w500").concat(poster_path, "\" alt=\"").concat(title, "\">\n     <h2>").concat(title, "</h2>||<span class=\"release_date\">").concat(release_date, "</span>\n     <span class=\"rate\">").concat(vote_average, "</span>\n     \n     \n  </li>");
   });
   filmList.insertAdjacentHTML('beforeEnd', markup.join(''));
 }
@@ -39,8 +38,6 @@ function homePageRender() {
   api.fetchTrendFilms().then(renderFilm);
 }
 "use strict";
-
-var filmList = document.querySelector('.main_filmlist');
 "use strict";
 "use strict";
 "use strict";
