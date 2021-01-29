@@ -52,6 +52,8 @@
     "usedcss": "^1.0.7"
   },
   "dependencies": {
-    "handlebars": "^4.7.6"
+    "colorize": "^0.1.0",
+    "handlebars": "^4.7.6",
+    "lodash.throttle": "^4.1.1"
   }
 }

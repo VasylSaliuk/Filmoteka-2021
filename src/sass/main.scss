@@ -3,6 +3,7 @@
  */
 
 @import 'normalize.scss';
+@import './utils/variables';
 @import './utils/fonts';
 @import 'base.scss';
 @import './components/_footer.scss';
@@ -10,3 +11,4 @@
 @import './utils/container';
 @import './components/header.scss';
 @import './components/homePage';
+@import './components/btnUp.scss';

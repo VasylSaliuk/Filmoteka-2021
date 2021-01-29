@@ -42,6 +42,13 @@ exports.start = series(
   serve,
 );
 
+exports.build = series(
+  tasks.clean,
+  tasks.images,
+  parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
+  tasks.inject,
+);
+
 var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
@@ -78,3 +85,4 @@ partials: ['templates/partials/**/*.hbs'],}))
  .pipe(htmlmin({collapseWhitespace: true}))
  .pipe(gulp.dest(''));
 });
+
