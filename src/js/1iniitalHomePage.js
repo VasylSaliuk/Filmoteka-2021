@@ -1,7 +1,9 @@
 'use strict';
 
-const filmList = document.querySelector('.main_filmlist');
-const api = {
+ const filmList = document.querySelector('.main_filmlist');
+ const logo=document.querySelector('.logo');
+ const homeBtn=document.querySelector('.home-link')
+ const api = {
   key: '0758483bbf141f2377e75ad4723d5ab5',
   baseUrl: 'https://api.themoviedb.org/3/',
   options: 'movie/popular?',
@@ -22,6 +24,7 @@ const api = {
       .then(data => data.results);
   },
 };
+
 console.log(api.fetchTrendFilms());
 
 function renderFilm(arr) {
@@ -42,6 +45,9 @@ function renderFilm(arr) {
 }
 
 document.addEventListener('DOMContentLoaded', homePageRender);
+
+logo.addEventListener('click', homePageRender);
+homeBtn.addEventListener('click', homePageRender);
 
 function homePageRender() {
   api.fetchTrendFilms().then(renderFilm);
